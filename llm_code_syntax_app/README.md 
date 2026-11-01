@@ -1,0 +1,50 @@
+# Local AI Chat App
+
+A clean, interactive chatbot application built with **Streamlit** that runs entirely on your local machine using **Ollama**. Your prompts and conversation history stay 100% private.
+
+## ⚙️ How It Works
+* **Frontend:** Streamlit handles the user interface, chat bubbles, and input states.
+* **Backend:** The app sends user inputs via an API request to your local Ollama service.
+* **Inference:** Ollama runs the LLM locally on your CPU/GPU and streams responses back to the chat UI.
+
+## 🛠️ Setup & Installation
+
+### 1. Download & Start Ollama
+1. Download Ollama for your operating system from [ollama.com](https://ollama.com).
+2. Open your terminal and download your preferred model (e.g., Qwen2.5 Coder):
+   ```bash
+   ollama run qwen2.5-coder:14b
+   ```
+3. Keep Ollama running in the background.
+
+### 2. Clone the Repository
+```bash
+git clone https://github.com
+cd your-repo-name
+```
+
+### 3. Set Up Your Virtual Environment (venv)
+Initialize your local environment and install the required dependencies:
+
+```bash
+# Create the virtual environment
+python -m venv venv
+
+# Activate it (Mac/Linux)
+source venv/bin/activate
+
+# Activate it (Windows PowerShell)
+# .\venv\Scripts\Activate.ps1
+
+# Install requirements
+pip install -r requirements.txt
+```
+
+## 🚀 Running the App
+Once your environment is active and Ollama is running, launch the chat interface:
+
+```bash
+streamlit run app.py
+```
+Your browser will automatically open to `http://localhost:8501` with your local chat interface ready to go!
+
